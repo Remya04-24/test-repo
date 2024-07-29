@@ -1,0 +1,29 @@
+{
+  "retailer": [
+    {
+      "customerId": 1,
+      "transactionDate": "2023-02-12",
+      "transactionAmount": 100
+    },
+    {
+      "customerId": 2,
+      "transactionDate": "2023-02-11",
+      "transactionAmount": 80
+    },
+    {
+      "customerId": 1,
+      "transactionDate": "2023-03-12",
+      "transactionAmount": 50
+    },
+    {
+      "customerId": 1,
+      "transactionDate": "2023-02-10",
+      "transactionAmount": 100
+    },
+    {
+      "customerId": 1,
+      "transactionDate": "2023-01-12",
+      "transactionAmount": 30
+    }
+  ]
+}
