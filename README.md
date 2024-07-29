@@ -50,3 +50,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### Create a json file db.json with properties customerId, amount, date
 
 http://localhost:1050/retailer
+
+ScreenShot of Reward Program available in public folder
+
+reward-programs\public\output.png
