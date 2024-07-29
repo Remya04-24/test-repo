@@ -17,6 +17,7 @@ function Rewards({ customerData }) {
     12: "December",
   };
 
+  // function to calculate the reward points
   const getPoints = (amount) => {
     if (amount <= 50) {
       return 0;
@@ -27,6 +28,7 @@ function Rewards({ customerData }) {
     }
   };
 
+  // to calculate the reward points by customer monthly
   const getMonthlyTransactionOfCustomer = (transactions) => {
     const rewardData = {};
     transactions.forEach((transaction) => {
@@ -54,12 +56,14 @@ function Rewards({ customerData }) {
   };
 
   useEffect(() => {
-    const groupedData = getMonthlyTransactionOfCustomer(customerData);
-    setData(groupedData);
+    if (customerData) {
+      const groupedData = getMonthlyTransactionOfCustomer(customerData);
+      setData(groupedData);
+    }
   }, [customerData]);
   return (
     <div>
-      <h1>Reward Points</h1>
+      <h1>Customer Reward Points</h1>
       <table>
         <tr>
           <th>Customers</th>
