@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 
 function Rewards({ customerData }) {
   const [data, setData] = useState([]);
+
+  // Creating a month object to map and show it as a text in table format
   const monthObj = {
     1: "January",
     2: "February",
@@ -17,7 +19,7 @@ function Rewards({ customerData }) {
     12: "December",
   };
 
-  // function to calculate the reward points
+  // function to calculate the reward points , if amt > 50 & 100 then get the difference
   const getPoints = (amount) => {
     if (amount <= 50) {
       return 0;
@@ -34,7 +36,6 @@ function Rewards({ customerData }) {
     transactions.forEach((transaction) => {
       const { customerId, transactionDate, transactionAmount } = transaction;
       const month = new Date(transactionDate).getMonth() + 1;
-      console.log("month", month);
       const points = getPoints(transactionAmount);
 
       if (!rewardData[customerId]) {
@@ -56,6 +57,7 @@ function Rewards({ customerData }) {
   };
 
   useEffect(() => {
+    // get the data from parent component and pass it to the monthly details function
     if (customerData) {
       const groupedData = getMonthlyTransactionOfCustomer(customerData);
       setData(groupedData);

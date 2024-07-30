@@ -4,7 +4,6 @@ import data from "../db.json";
 
 describe("Reward Component", () => {
   test("Render Reward Component", () => {
-    console.log("data", data);
     render(<Rewards data={data.retailer} />);
     expect(screen.getByText("Customer Reward Points")).toBeInTheDocument();
   });

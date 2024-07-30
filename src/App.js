@@ -14,7 +14,7 @@ import Rewards from "./Rewards";
 function App() {
   const [customerData, setCustomerData] = useState([]);
 
-  // to fetch the json data
+  // to fetch the json data (db.json)
   useEffect(() => {
     fetch("http://localhost:1050/retailer")
       .then((response) => response.json())
